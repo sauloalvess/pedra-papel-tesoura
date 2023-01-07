@@ -12,9 +12,14 @@ def play():
 
     return 'Voce perdeu :('
 
-# P > T, A > P, T > P
+# Pedra > Tesoura, Tesoura > pApel, pApel > Pedra  
 def venceu(jogador, computador): # Retorna True se o jogador vencer
     if (jogador == 'p' and computador == 't') or (jogador == 't' and computador == 'a') or (jogador == 'a' and computador == 'p'):
         return True
 
-print(play())
+# Mantém a jogatina acontecendo :)
+jogador = False
+
+while jogador == False:
+    print(play())
+    jogador == False
